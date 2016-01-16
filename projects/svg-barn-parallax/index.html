@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>SVG barn parallax</title>
+</head>
+<body>
+	<object id="svg-object" data="bran-parallax.svg" type="image/svg+xml">
+	  <!--img src="yourfallback.jpg" /-->
+	  <p>No SVG support</p>
+	</object>
+	<script type="text/javascript" src="rotate-p-parallax.js"></script>
+	<script type="text/javascript">
+		var object = document.getElementById("svg-object");
+		object.onload=function() {
+			var svgDocument = object.getSVGDocument();
+			setupSceneAnimation(svgDocument);
+		}
+	</script>
+</body>
+</html>
